@@ -44,10 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps terceros
     'crispy_forms',
+    'registration',
     #mis apps
     'boletin',
 ]
@@ -64,6 +66,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pd110.urls'
 
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
 CRISPY_TEMPLATES_PACK = 'bootstrap3'
 
 TEMPLATES = [
