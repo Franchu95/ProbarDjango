@@ -13,8 +13,8 @@ def inicio(request):
 	form = RegModelForm(request.POST or None)
 
 	context = {
-		"titulo":titulo,
-		"el_form":form,
+		"titulo": titulo,
+		"el_form": form,
 	}
 
 
@@ -41,8 +41,9 @@ def inicio(request):
 				"titulo":"Gracias %s!" %(email)
 			}
 	if request.user.is_authenticated and request.user.is_staff:
+		queryset = Registrado.objects.all().order_by("-timestamp")#.filter(nombre__iexact="Franchu")
 		context ={
-		"queryset" : ["abc" , "123"],
+		"queryset" : queryset,
 		}
 	return render(request, "inicio.html", context)
 
