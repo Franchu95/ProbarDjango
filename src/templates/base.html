@@ -11,6 +11,11 @@
 
     <title>{% block head_title %}PD 110{% endblock %}</title>
 
+<style>
+  {% block style %}{% endblock %}
+</style>
+
+
 {% include "head_css.html" %} 
   </head>
 
@@ -18,12 +23,8 @@
 
 {% include "navbar.html" %}
 
-    <div class="container-fluid">
 {% block jumbotron %}
-<main role="main" class="container">
-     
 {% endblock %} 
-    </main>
   
 {% block content %}
 {% endblock %}
